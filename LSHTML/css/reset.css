@@ -1,0 +1,47 @@
+/* CSS Document */
+html, body {position: relative;height: 100%;}
+body{color:#333;background:#fff;font-size:100%;line-height:20px; font-family:"Microsoft Yahei",Tahoma,Arial,Roboto,Simsun,sans-self;}
+h1,h2,h3,h4,select,input,button,textarea{font-size:100%; font-weight:normal;}
+body,h1,h2,h3,h4,h5,div,ol,ul,li,dl,dt,dd,form,p,img,hr{margin:0;padding:0;border:0;}
+input,button,select,img{margin:0; padding:0; line-height:normal; border:0;}
+ul,li,dl,dt,dd{list-style:none}
+select,input,textarea,button,button img,label{vertical-align:middle; font-family:"Microsoft Yahei",Tahoma,Arial,Roboto,Simsun,sans-self;}
+header,footer,section,aside,nav,hgroup,figure,figcaption{display:block;margin:0;padding:0;border:none}
+a, a:link, a:visited{color:#333;text-decoration:none;cursor:pointer;}
+a:hover{color:#ffcc33;text-decoration:none;cursor:pointer;}
+
+.clearfix:after {content: "";display: block;height: 0;clear: both;visibility:hidden;}
+.clearfix {zoom: 1;}
+
+.in-block{display: inline-block; vertical-align: middle;}
+.v-am{display: inline-block; vertical-align: middle; width: 1px; margin-left: -1px; height: 100%;}
+
+.content{width: 1000px; margin: 0 auto; position: relative;}
+
+.pl10{padding-left:10px;}
+.pt40{padding-top:40px;}
+.pt80{padding-top:80px;}
+.pb80{padding-bottom:80px;}
+
+
+.c-blue{color: #58c7cf;}
+
+.tr{text-align: right;}
+.fr{float: right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
