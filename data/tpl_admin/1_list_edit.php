@@ -35,7 +35,7 @@ $(document).ready(function(){
 			'dataType':'json',
 			'success':function(rs){
 				if(rs.status == 'ok'){
-					var url = "<?php echo phpok_url(array('ctrl'=>'list','func'=>'action','id'=>$pid));?>";
+					var url = "<?php echo phpok_url(array('ctrl'=>'list','func'=>'','id'=>$pid));?>";
 					if(pcate>0){
 						if(pcate_multiple > 0){
 							var cateid = $("input[name=cate_id]:checked").val();
@@ -88,6 +88,7 @@ $(document).ready(function(){
 	<div class="table">
 	<div class="content">
 		<input type="text" name="title" id="title" value="<?php echo $rs['title'];?>" class="title" placeholder="请在此输入<?php echo $p_rs['alias_title'] ? $p_rs['alias_title'] : '主题';?><?php if($p_rs['alias_note']){ ?>，<?php echo $p_rs['alias_note'];?><?php } ?>" />
+		<input type="text" name="title_en" id="title_en" value="<?php echo $rs['title_en'];?>" class="title_en" placeholder="" />
 	</div>
 	</div>
 	<?php if($attrlist && $p_rs['is_attr']){ ?>

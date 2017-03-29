@@ -7,12 +7,12 @@
       <h1><a href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}" /></a></h1>
       <nav class="nav">
         <!-- php:$list = phpok('menu') -->
-	<!-- loop from=$list.rslist key=$key value=$value id=list_id -->
-	<li{if $menutitle == $value.title} class="current"{/if}{if !$list_id.index} style="margin-left:4px;"{/if}>
-		<a href="{$value.url}" title="{$value.title}" target="{$value.target}">{$value.title}</a>
+      	<!-- loop from=$list.rslist key=$key value=$value id=list_id -->
+      	<li{if $menutitle == $value.title} class="current"{/if}{if !$list_id.index} style="margin-left:4px;"{/if}>
+      		<a href="{$value.url}" title="{$value.title}" target="{$value.target}"><span>{$value.title}</span><p>{$value.title_en}</p></a>
 
-	</li>
-	<!-- /loop -->
+      	</li>
+      	<!-- /loop -->
       </nav>
     </div>
   </header>

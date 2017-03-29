@@ -35,7 +35,7 @@ $(document).ready(function(){
 			'dataType':'json',
 			'success':function(rs){
 				if(rs.status == 'ok'){
-					var url = "{url ctrl=list func=action id=$pid/}";
+					var url = "{url ctrl=list func=  id=$pid/}";
 					if(pcate>0){
 						if(pcate_multiple > 0){
 							var cateid = $("input[name=cate_id]:checked").val();
@@ -88,6 +88,7 @@ $(document).ready(function(){
 	<div class="table">
 	<div class="content">
 		<input type="text" name="title" id="title" value="{$rs.title}" class="title" placeholder="请在此输入{$p_rs.alias_title ? $p_rs.alias_title : '主题'}{if $p_rs.alias_note}，{$p_rs.alias_note}{/if}" />
+		<input type="text" name="title_en" id="title_en" value="{$rs.title_en}" class="title_en" placeholder="" />
 	</div>
 	</div>
 	<!-- if $attrlist && $p_rs.is_attr -->

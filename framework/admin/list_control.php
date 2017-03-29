@@ -513,10 +513,13 @@ class list_control extends phpok_control
 		}
 		$array = array();
 		$title = $this->get("title");
+		$title_en = $this->get("title_en");
+		
 		if(!$title){
 			$this->json(P_Lang('内容的主题不能为空'));
 		}
 		$array["title"] = $title;
+		$array["title_en"] = $title_en;
 		if($p_rs['cate']){
 			$cate_id = $this->get("cate_id","int");
 			if(!$cate_id){

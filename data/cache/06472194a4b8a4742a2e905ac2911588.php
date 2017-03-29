@@ -1,1 +1,1 @@
-<?php exit();?>a:1:{s:3:"ext";a:1:{s:7:"content";s:93:"版权所有 Copyright(C)2016 路尚雕塑艺术（北京）有限公司 京ICP备16025593号";}}
+<?php exit();?>a:1:{s:3:"ext";a:1:{s:7:"content";s:67:"Powered By phpok.com 版权所有 © 2004-2014, All right reserved.";}}
