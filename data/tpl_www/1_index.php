@@ -95,18 +95,35 @@
       <p>News information</p>
     </div>
     <div class="news-group">
-      <div class="left"><a href="" class="img"><img src="img/img-new.png" alt=""></a><div class="t"><a href="">重庆南川市商业步行街</a><hr><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></div></div>
+    <?php $list = phpok('news');?>
+      <div class="left">
+      <?php $list_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_id["total"] = count($list['rslist']);$list_id["index"] = -1;foreach($list['rslist'] AS $num=>$value){ $list_id["num"]++;$list_id["index"]++; ?>
+      <?php if($list_id['index']<1){ ?>
+
+      <a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>" class="img"><img src=<?php echo $value['thumb']['filename'];?> alt=""></a>
+      <div class="t"><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><hr><p><?php echo $value['note'];?></p></div>
+      </div>
+      <?php } ?>
+      <?php } ?>
       <div class="right">
+        
         <div class="news-ilist">
           <ul>
+            <?php $list_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_id["total"] = count($list['rslist']);$list_id["index"] = -1;foreach($list['rslist'] AS $num=>$value){ $list_id["num"]++;$list_id["index"]++; ?>
+            <?php if($list_id['index']<5){ ?>
+            <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><p><?php echo $value['note'];?></p>
+            </li>
+            <?php } ?>
+            <?php } ?>
+
+            <!-- <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
             <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
             <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
-            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
-            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
+            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li> -->
           </ul>
         </div>
         <div class="news-more">
-          <a href="" class="more"></a>
+          <a class="more" href="<?php echo $list['project']['url'];?>"></a>
         </div>
       </div>
     </div>
@@ -176,5 +193,5 @@
       </div>
     </div>
   </div>
-
+  
 <?php $this->output("foot","file"); ?>
