@@ -71,7 +71,7 @@ class content_control extends phpok_control
 		}
 		$this->assign('page_rs',$project);
 		$this->phpok_seo($project);
-		
+
 		if($rs['tpl']){
 			$tplfile[0] = $rs['tpl'];
 		}

@@ -28,7 +28,7 @@ if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
  * @更新时间 2016年06月05日
 **/
 $config["db"]["file"] = "mysqli";
-$config["db"]["host"] = "127.0.0.1";
+$config["db"]["host"] = "123.207.56.190";
 $config["db"]["port"] = "3306";
 $config["db"]["user"] = "root";
 $config["db"]["pass"] = "root";
@@ -42,7 +42,7 @@ $config["db"]['debug'] = false;
  * @参数 autocheck 值可选true或false，为true时表示自动检测手机端，启用后，检测出手机端将读取手机端网页
  * @参数 status 值可选true或false，手机端开始，此项为false时不使用手机端
  * @参数 default 值可选true或false，值为true时，在PC端也是打开手机站风格，便于开发人员调试。正式使用时请关闭
- * @更新时间 
+ * @更新时间
 **/
 $config['mobile']['autocheck'] = true;
 $config['mobile']['status'] = true;
@@ -52,8 +52,8 @@ $config['mobile']['default'] = false;
  * 开发调试参数本配置
  * @参数 develop 值可选true或false，开发模式，正常运行的网站请设为false，可防止CRSF注入
  * @参数 debug 值可选true或false，启用调试模式后，将不支持zend opcache，在正式投入使用时，请改为false
- * @返回 
- * @更新时间 
+ * @返回
+ * @更新时间
 **/
 $config['develop'] = true;
 $config['debug'] = true;

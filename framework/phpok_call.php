@@ -121,6 +121,7 @@ class phpok_call extends phpok_control
 		}
 		$cache_id = $this->cache->id($call_rs);
 		$info = $this->cache->get($cache_id);
+		// print_r($info);
 		if($info){
 			return $info;
 		}
@@ -282,7 +283,7 @@ class phpok_call extends phpok_control
 		if($cache_id){
 			$this->cache->save($cache_id,$array);
 		}
-		return $array;	
+		return $array;
 	}
 
 	private function _arc_condition($rs,$fields='')
@@ -445,7 +446,7 @@ class phpok_call extends phpok_control
 		}
 		return $rslist;
 	}
-	
+
 	private function _total($rs)
 	{
 		if(!$rs['pid'] && !$rs['phpok']){
@@ -962,7 +963,7 @@ class phpok_call extends phpok_control
 			if($v['parent_id'] != $rs['cateid']){
 				continue;
 			}
-			
+
 			$cate_tmp = $this->model('ext')->ext_all('cate-'.$v['id'],true);
 			if($cate_tmp){
 				foreach($cate_tmp as $key=>$value){
@@ -1019,7 +1020,7 @@ class phpok_call extends phpok_control
 		$condition = " id IN(".implode(",",$ids).") ";
 		return $this->model('res')->get_list($condition,0,999,true);
 	}
-	
+
 	private function _user($rs)
 	{
 		if(!$rs['phpok'] && !$rs['user_id']){

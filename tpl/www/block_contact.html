@@ -1,5 +1,5 @@
 <!-- php:$contact = phpok('contact') -->
-<div class="pfw">
+<!-- <div class="pfw">
 	<div class="title"><h3>{$contact.title}</h3></div>
 	<div class="info contact_info">
 		<h4>{$contact.company}</h4>
@@ -9,4 +9,23 @@
 			<li><i>邮　箱：</i>{$contact.email}</li>
 		</ul>
 	</div>
+</div> -->
+
+<div class="contact-us-group">
+  <div class="content">
+    <div class="hgroup">
+      <h3>联系我们</h3>
+      <hr>
+      <p>contact us</p>
+    </div>
+    <div class="contact-group clearfix">
+      <span class="img"><img src={$contact.contact_img.filename} alt=""></span>
+      <div class="contact-card ">
+        <div class="card card-l">{$contact.content}
+        </div>
+        <div class="card card-r">{$contact.content_sec}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
