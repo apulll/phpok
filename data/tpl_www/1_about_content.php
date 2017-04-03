@@ -1,5 +1,8 @@
 <?php if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");} ?><?php $title = $rs['title'].' - '.$page_rs['title'];?>
 <?php $title=$title;?><?php $this->assign("title",$title); ?><?php $menutitle=$page_rs['title'];?><?php $this->assign("menutitle",$page_rs['title']); ?><?php $this->output("head","file"); ?>
+<div class="nbanner" style='background-image: url("<?php echo $rs['company_pro_banner']['filename'];?>");'>
+    
+  </div>
 <div class="content">
     <div class="hgroup">
       <h3><?php echo $rs['title'];?></h3>

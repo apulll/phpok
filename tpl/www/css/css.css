@@ -120,4 +120,33 @@
 .feedback-list dl.c2 dd { width: calc(100% - 80px); }
 .feedback-list textarea { border: 1px #ccc solid; width: 97%; box-sizing: border-box; padding: 10px; height: 100px; border-radius: 6px; }
 
+.case-section .left { position: absolute; top: 0; left: 0; width: 260px; text-align: center; padding-top: 50px; }
+.case-section .left .lnav { width: 219px; height: 306px; background: url("../images/case-cat.png") no-repeat; display: inline-block; vertical-align: top; margin-bottom: 40px; }
+.case-section .left .lnav.lnav-1 { background-position: 0 0; }
+.case-section .left .lnav.lnav-1.current { background-position: -219px 0; }
+.case-section .left .lnav.lnav-2 { background-position: 0 -306px; }
+.case-section .left .lnav.lnav-2.current { background-position: -219px -306px; }
+.case-section .right { padding-left: 310px; padding-top: 40px; }
+.case-section .case-list { font-size: 0; line-height: 0; }
+.case-section .case-list > ul > li { width: 33.3%; display: inline-block; vertical-align: top; text-align: center; height: 450px; }
+.case-section .box span { border: 4px #fff solid; display: inline-block; vertical-align: top; }
+.case-section .box h3 { font-size: 18px; color: #666; line-height: 76px; }
+.case-section .box button { width: 112px; height: 30px; font-size: 14px; text-align: center; line-height: 30px; background: none; border: 1px #ccc solid; display: inline-block; vertical-align: top; }
+.case-section .box:hover span { box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+.case-section .box:hover button { border-color: #ef1b27; color: #ef1b27; }
+
+.show-detail { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99; background: rgba(0, 0, 0, 0.8); display: none; }
+.show-detail .close { position: absolute; top: 50px; right: 50px; width: 50px; height: 50px; background: url("../images/close.png"); cursor: pointer; }
+.show-detail .slide { width: 810px; height: 810px; position: absolute; top: calc(50% - 405px); left: calc(50% - 405px); background: url("../images/show-bg.png"); }
+.show-detail .img { width: 810px; height: 810px; background-position: center center; background-repeat: no-repeat; }
+.show-detail .nimg { width: 810px; height: 810px; background-position: center center; background-repeat: no-repeat; }
+.show-detail .slidesjs-pagination { position: absolute; bottom: 30px; text-align: center; left: 0; right: 0; }
+.show-detail .slidesjs-pagination li { display: inline-block; vertical-align: top; padding: 0 5px; font-size: 0; }
+.show-detail .slidesjs-pagination a { width: 86px; height: 7px; background: rgba(255, 255, 255, 0.3); display: inline-block; vertical-align: top; }
+.show-detail .slidesjs-pagination a.active { background: white; }
+.show-detail .slidesjs-navigation { position: absolute; top: calc(50% - 30px); width: 32px; height: 61px; background: url("../images/arrow-2.png") no-repeat; font-size: 0; z-index: 99; }
+.show-detail .slidesjs-navigation.slidesjs-previous { left: 10px; }
+.show-detail .slidesjs-navigation.slidesjs-next { right: 10px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+.show-detail h3.tit { position: absolute; top: calc(50% + 430px); left: 0; right: 0; font-size: 18px; color: #fff; text-align: center; font-weight: normal; }
+
 /*# sourceMappingURL=css.css.map */

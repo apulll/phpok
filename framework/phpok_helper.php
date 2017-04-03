@@ -912,4 +912,20 @@ function phpok_call_api_url($phpok,$param='',$tpl='')
 	$ext .= "token=".rawurlencode($token);
 	return api_url('index','phpok',$ext,true);
 }
+
+//
+function pro_case_list($caselist) 
+{
+	$tmp = array();
+	foreach($caselist AS $key=>$value)
+		{
+
+					$tmp[] = $value['gd']['thumb'];
+
+				
+		}
+	$tmp = implode(";",$tmp);
+	return $tmp;
+}
+
 ?>

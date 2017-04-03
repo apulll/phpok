@@ -23,6 +23,7 @@ class content_control extends phpok_control
 	public function index_f()
 	{
 		$id = $this->get("id");
+		
 		if(!$id){
 			error(P_Lang('未指定ID'),"","error");
 		}
@@ -126,6 +127,7 @@ class content_control extends phpok_control
 		$rs['hits'] = $this->model('list')->get_hits($rs['id']);
 		$this->phpok_seo($rs);
 		$this->assign("rs",$rs);
+
 		$this->view($tpl);
 	}
 

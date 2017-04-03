@@ -1,9 +1,16 @@
 <?php if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");} ?><?php $menutitle="网站首页";?><?php $this->assign("menutitle","网站首页"); ?><?php $this->output("head","file"); ?>
+
+<?php $list = phpok('picplayer');?>
+<?php if($list['total']){ ?>
 <div class="banner" id="banner">
-    <a href="" style='background-image: url("tpl/www/images/banner-i.png");' class="banner-a"></a>
-    <a href="" style='background-image: url("tpl/www/images/banner-i.png");' class="banner-a"></a>
-    <a href="" style='background-image: url("tpl/www/images/banner-i.png");' class="banner-a"></a>
-  </div>
+    <?php $list_rslist_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_rslist_id["total"] = count($list['rslist']);$list_rslist_id["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $list_rslist_id["num"]++;$list_rslist_id["index"]++; ?>
+    <a href="<?php echo $value['link'];?>" target="<?php echo $value['target'];?>" title="<?php echo $value['title'];?>" style='background-image: url("<?php echo $value['banner']['filename'];?>");' class="banner-a">
+      
+    </a>
+    <?php } ?>
+</div>
+
+<?php } ?>
   <div class="content">
     <div class="notice">
       <span></span>
