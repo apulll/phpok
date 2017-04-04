@@ -33,14 +33,16 @@
     <div class="case-slide slide-ic" id="case-slide-1">
       <span class="arrow-left"></span>
       <div class="index-case-content">
+        <?php $list = phpok('product');?>
         <div class="index-case-list">
           <ul>
-            <li><a href=""><img src="img/img-1.png" alt=""></a></li>
-            <li><a href=""><img src="img/img-2.png" alt=""></a></li>
-            <li><a href=""><img src="img/img-3.png" alt=""></a></li>
-            <li><a href=""><img src="img/img-4.png" alt=""></a></li>
-            <li><a href=""><img src="img/img-5.png" alt=""></a></li>
-            <li><a href=""><img src="img/img-6.png" alt=""></a></li>
+            <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+            <?php $thumb = current($value['thumb']);?>
+            
+            <?php if($value['competitive_pro']){ ?>
+              <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+            <?php } ?>
+            <?php } ?>
           </ul>
         </div>
       </div>
@@ -96,6 +98,8 @@
         <span class="arrow-right"></span>
       </div>
     </div>
+    
+
     <div class="hgroup">
       <h3>新闻动态</h3>
       <hr>

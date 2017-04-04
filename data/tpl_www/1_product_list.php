@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="pages">
-
+    	<?php $this->output("block_pagelist","file"); ?>
     </div>
   </div>
   <div class="show-detail" id="show-detail">

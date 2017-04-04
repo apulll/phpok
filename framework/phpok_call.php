@@ -121,7 +121,6 @@ class phpok_call extends phpok_control
 		}
 		$cache_id = $this->cache->id($call_rs);
 		$info = $this->cache->get($cache_id);
-		// print_r($info);
 		if($info){
 			return $info;
 		}

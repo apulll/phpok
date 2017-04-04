@@ -45,6 +45,8 @@ function token($data)
 //home=首页&prev=上一页&next=下一页&last=尾页&half=5&opt=1&add={total}/{psize}
 function phpok_page($url,$total,$num=0,$psize=20,$param="")
 {
+	print_r($psize);
+	
 	if(!$url || !$total){
 		return false;
 	}

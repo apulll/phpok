@@ -1,5 +1,5 @@
 /* CSS Document */
-html, body {position: relative;height: 100%;}
+html, body {position: relative;min-height: 100%;}
 body{color:#333;background:#fff;font-size:100%;line-height:20px; font-family:"Microsoft Yahei",Tahoma,Arial,Roboto,Simsun,sans-self;}
 h1,h2,h3,h4,select,input,button,textarea{font-size:100%; font-weight:normal;}
 body,h1,h2,h3,h4,h5,div,ol,ul,li,dl,dt,dd,form,p,img,hr{margin:0;padding:0;border:0;}
