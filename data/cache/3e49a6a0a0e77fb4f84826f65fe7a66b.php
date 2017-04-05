@@ -1,1 +1,1 @@
-<?php exit();?>a:6:{s:2:"id";s:2:"78";s:5:"title";s:12:"产品展示";s:6:"status";s:1:"1";s:5:"taxis";s:2:"60";s:4:"note";s:0:"";s:6:"layout";s:25:"hits,dateline,thumb,price";}
+<?php exit();?>a:6:{s:2:"id";s:2:"75";s:5:"title";s:6:"资讯";s:6:"status";s:1:"1";s:5:"taxis";s:2:"30";s:4:"note";s:0:"";s:6:"layout";s:19:"hits,dateline,thumb";}

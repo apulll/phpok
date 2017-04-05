@@ -134,5 +134,25 @@ class post_control extends phpok_control
 		}
 		$this->json(true);
 	}
+
+	public function cooperation_f() {
+		// $data = $this->get('data');
+		$data = $_POST['data'];
+		$arr = $this->get('data');
+
+		$array = array();
+		$id = $this->get('id','system');
+		print_r($arr);
+		// $data = array();
+		// foreach ($arr as $k => $v) {
+		//     if (preg_match('/(?<=name)\d+/',$k,$m)) {
+		//         $data[] = array($v,$arr['age'.$m[0]]);
+		//     }
+		// }
+		// var_dump($data);
+
+		// print_r($data);
+		$this->json(true);
+	}
 }
 ?>

@@ -5,7 +5,7 @@
 <div class="banner" id="banner">
     <?php $list_rslist_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_rslist_id["total"] = count($list['rslist']);$list_rslist_id["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $list_rslist_id["num"]++;$list_rslist_id["index"]++; ?>
     <a href="<?php echo $value['link'];?>" target="<?php echo $value['target'];?>" title="<?php echo $value['title'];?>" style='background-image: url("<?php echo $value['banner']['filename'];?>");' class="banner-a">
-      
+
     </a>
     <?php } ?>
 </div>
@@ -15,13 +15,12 @@
     <div class="notice">
       <span></span>
       <div class="notice-list" id="notice-list">
+      <?php $list = phpok('news');?>
         <ul>
-          <li><a href="">1重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
-          <li><a href="">2重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
-          <li><a href="">3重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
-          <li><a href="">4重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
-          <li><a href="">5重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
-          <li><a href="">6重庆南川市商业步行街,主题建筑于2015年盛大开幕。</a></li>
+          <?php $list_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_id["total"] = count($list['rslist']);$list_id["index"] = -1;foreach($list['rslist'] AS $num=>$value){ $list_id["num"]++;$list_id["index"]++; ?>
+            <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a>
+            </li>
+            <?php } ?>
         </ul>
       </div>
     </div>
@@ -37,10 +36,11 @@
         <div class="index-case-list">
           <ul>
             <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+
             <?php $thumb = current($value['thumb']);?>
-            
+
             <?php if($value['competitive_pro']){ ?>
-              <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
             <?php } ?>
             <?php } ?>
           </ul>
@@ -56,19 +56,22 @@
     <div class="case-project">
       <div class="left">
         <p><img src="tpl/www/images/case-t1.png" alt=""></p>
-        <a href="" class="more"></a>
+        <a href="product/basso_relievo.html" class="more"></a>
       </div>
       <div class="right slide-c" id="case-slide-2">
         <span class="arrow-left"></span>
         <div class="index-case-content">
+        <?php $list = phpok('product');?>
           <div class="index-case-list">
             <ul>
-              <li><a href=""><img src="img/img-1.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-2.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-3.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-4.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-5.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-6.png" alt=""></a></li>
+            <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+            <?php $thumb = current($value['thumb']);?>
+
+            <?php if($value['cate_id'] == 11){ ?>
+              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+            <?php } ?>
+            <?php } ?>
+
             </ul>
           </div>
         </div>
@@ -79,26 +82,34 @@
     <div class="case-project">
       <div class="left">
         <p><img src="tpl/www/images/case-t2.png" alt=""></p>
-        <a href="" class="more"></a>
+        <a href="/product/round_sculpture.html" class="more"></a>
+        <?php $list=phpok('_catelist',array('pid'=>$page_rs['id']));?>
+
+        <?php $tmpid["num"] = 0;$list['sublist']=is_array($list['sublist']) ? $list['sublist'] : array();$tmpid["total"] = count($list['sublist']);$tmpid["index"] = -1;foreach($list['sublist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+        <li<?php if($cate_rs['id'] == $value['id']){ ?> class="current"<?php } ?>><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a></li>
+        <?php } ?>
       </div>
       <div class="right slide-c" id="case-slide-3">
         <span class="arrow-left"></span>
         <div class="index-case-content">
+          <?php $list = phpok('product');?>
           <div class="index-case-list">
             <ul>
-              <li><a href=""><img src="img/img-1.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-2.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-3.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-4.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-5.png" alt=""></a></li>
-              <li><a href=""><img src="img/img-6.png" alt=""></a></li>
+            <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+            <?php $thumb = current($value['thumb']);?>
+
+            <?php if($value['cate_id'] == 12){ ?>
+              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+            <?php } ?>
+            <?php } ?>
+
             </ul>
           </div>
         </div>
         <span class="arrow-right"></span>
       </div>
     </div>
-    
+
 
     <div class="hgroup">
       <h3>新闻动态</h3>
@@ -112,25 +123,20 @@
       <?php if($list_id['index']<1){ ?>
 
       <a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>" class="img"><img src=<?php echo $value['thumb']['filename'];?> alt=""></a>
-      <div class="t"><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><hr><p><?php echo $value['note'];?></p></div>
+      <div class="t"><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><hr><p><?php echo $value['note'] ? phpok_cut($value['note'],30,'…') : phpok_cut($value['content'],30,'…');?></p></div>
       </div>
       <?php } ?>
       <?php } ?>
       <div class="right">
-        
+
         <div class="news-ilist">
           <ul>
             <?php $list_id["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$list_id["total"] = count($list['rslist']);$list_id["index"] = -1;foreach($list['rslist'] AS $num=>$value){ $list_id["num"]++;$list_id["index"]++; ?>
             <?php if($list_id['index']<5){ ?>
-            <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><p><?php echo $value['note'];?></p>
+            <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a><p><?php echo $value['note'] ? phpok_cut($value['note'],30,'…') : phpok_cut($value['content'],30,'…');?></p>
             </li>
             <?php } ?>
             <?php } ?>
-
-            <!-- <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
-            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
-            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li>
-            <li><a href="">重庆南川市商业步行街</a><p>重庆南川市商业步行街,主题建筑于2015年盛大开幕。为庆祝此举，我们</p></li> -->
           </ul>
         </div>
         <div class="news-more">
@@ -204,5 +210,5 @@
       </div>
     </div>
   </div>
-  
+
 <?php $this->output("foot","file"); ?>

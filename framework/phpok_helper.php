@@ -37,6 +37,8 @@ function admin_url($ctrl,$func="",$ext="")
 //root，是否包含网站域名
 function api_url($ctrl,$func="",$ext="",$root=false)
 {
+	print_r($GLOBALS['app']);
+
 	$url = $root ? $GLOBALS['app']->url : '';
 	$url .= $GLOBALS['app']->config['api_file'].'?';
 	if($ctrl && $ctrl != 'index'){
@@ -52,6 +54,7 @@ function api_url($ctrl,$func="",$ext="",$root=false)
 	if(substr($url,-1) == '&'){
 		$url = substr($url,0,-1);
 	}
+
 	return $url;
 }
 
@@ -400,7 +403,7 @@ function ext_save($myid,$is_add=false,$save_id="")
 			$GLOBALS['app']->model("ext")->extc_save($val,$value["id"]);
 		}
 	}
-	return true;	
+	return true;
 }
 
 # 删除扩展字段
@@ -717,7 +720,7 @@ function tpl_head($array=array())
 		$html .= "\n".'</head>';
 	}
 	$html .= "\n";
-	return $html;	
+	return $html;
 }
 
 //表单生成器
@@ -752,7 +755,7 @@ function form_fields($identifer='',$id='',$content='',$return='')
 	}
 	$rs['identifier'] = $id;
 	$rs['content'] = $content;
-	
+
 	$rs = $GLOBALS['app']->lib('form')->format($rs);
 	if($return == 'array') return $rs;
 	return $rs['html'];
@@ -914,7 +917,7 @@ function phpok_call_api_url($phpok,$param='',$tpl='')
 }
 
 //
-function pro_case_list($caselist) 
+function pro_case_list($caselist)
 {
 	$tmp = array();
 	foreach($caselist AS $key=>$value)
@@ -922,7 +925,7 @@ function pro_case_list($caselist)
 
 					$tmp[] = $value['gd']['thumb'];
 
-				
+
 		}
 	$tmp = implode(";",$tmp);
 	return $tmp;

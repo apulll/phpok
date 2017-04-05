@@ -18,6 +18,7 @@ class index_control extends phpok_control
 	public function index_f()
 	{
 		$tmp = $this->model('id')->id('index',$this->site['id'],true);
+
 		$tplfile = 'index';
 		if($tmp){
 			$pid = $tmp['id'];
@@ -29,6 +30,8 @@ class index_control extends phpok_control
 			}
 			unset($page_rs);
 		}
+		$case_url = 'aaa.html';
+		$this->assign("caseUrl",$case_url);
 		$this->view($tplfile);
 	}
 

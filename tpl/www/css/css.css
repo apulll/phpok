@@ -83,7 +83,7 @@
 .contact-us .list > dl > dd { width: calc(100% - 70px); display: inline-block; vertical-align: top; }
 
 .footer { text-align: center; }
-.footer .nav-sec { padding: 18px 0; border-bottom: 1px #eee solid; }
+.footer .nav-sec { padding: 18px 0; border-bottom: 1px #eee solid;  border-top: 1px #eee solid;}
 .footer .nav-sec a { display: inline-block; vertical-align: top; padding: 0 20px; }
 .footer p { font-size: 12px; color: #999; line-height: 34px; }
 
@@ -149,4 +149,56 @@
 .show-detail .slidesjs-navigation.slidesjs-next { right: 10px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .show-detail h3.tit { position: absolute; top: calc(50% + 430px); left: 0; right: 0; font-size: 18px; color: #fff; text-align: center; font-weight: normal; }
 
+
+.xwdt{ padding:60px 0 0; margin:0 auto; width:1200px; position:relative}
+.xwdtl{width: 100% }
+.xwdtl li{ padding:20px 0; border-bottom:1px dashed #d9d9d9;}
+.xwdtll{ float:left; padding: 10px;}
+.xwdtll span{ display:table-cell; vertical-align:middle; text-align:center; width:100px; height:100px;}
+.xwdtll span img{ width:110px; height:100px;}
+.xwdtlr{ width:840px;float:left;padding-left: 15px; font-size:15px; line-height:25px; color:#999}
+.xwdtlr h1 a{ display:inline-block; line-height:30px; padding:5px 0; font-size:18px; color:#333;}
+.xwdtlr h1 a:hover{ color:#13a6ea}
+a.xwgd{ display:inline-block; line-height:40px; color:#c9caca; font-family:Arial}
+
+.news-detail__content {
+	    padding: 50px 20px 30px 20px;
+    min-height: 100%;
+    /* overflow: hidden; */
+    width: 1000px;
+}
+.news-detail__h1 {
+	text-align: center;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    /* color: #c9caca; */
+    font-family: Arial;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    margin-bottom: 72px;
+}
+.date_hits_tags {
+	margin-bottom: 20px;
+}
+.news-pub__date {
+	color:#afafaf;
+}
+.news-hits__num {
+	color:#afafaf;
+}
+.news-con__page {
+	margin-top: 20px;
+}
+
+/* 通用分页样式 */
+.pages{height:26px; margin:15px 0 40px 0;}
+.pages ul{ float:right; padding:0 10px;list-style:none;margin:0; }
+.pages li{ float:left; margin-left:5px;}
+.pages li a{ display:block; padding:2px 4px; height:18px; line-height:18px; color:#666;}
+.pages li a:hover{  background:#ef1b27; color:#fff; text-decoration:none;}
+.pages li span{ display:block;  height:18px; line-height:18px; color:#c4c4c4;padding:0 10px; }
+.pages .current a{  background:#ef1b27; color:#fff;}
 /*# sourceMappingURL=css.css.map */
