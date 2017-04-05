@@ -134,5 +134,37 @@ class post_control extends phpok_control
 		}
 		$this->json(true);
 	}
+
+	public function cooperation_f() {
+		// $data = $this->get('data');
+		$data = $_POST['data'];
+		$arr = $this->get('data');
+
+		$array = array();
+
+		$module_id = 82;
+		$array["site_id"] = 1;
+		$array["project_id"] = 175;
+		$array["cate_id"] = 0;
+		$array["fullname"] = $arr["fullname"];
+		$array["company_name"] = $arr['company_name'];
+		$array["email"] = $arr['email'];
+		$array["mobile"] = $arr['mobile'];
+		$array["city_name"] = $arr['city_name'];
+		$array["content"] = $arr['content'];
+		$tmp = array();
+		$tmp["title"] = $this->get("title");
+
+		$insert_id = $this->model('list')->save($tmp);
+		$array["id"] = $insert_id;
+		$get_result = $this->model('list')->save_ext_aaa($array,82);
+		// $get_result = $this->model('list')->save_ext($array,82);
+		if(!$get_result){
+			$this->json(P_Lang('编辑失败，请联系管理员'));
+		}
+
+
+		$this->json(true);
+	}
 }
 ?>

@@ -24,10 +24,13 @@ class content_control extends phpok_control
 	{
 		$id = $this->get("id");
 		
+		
+
 		if(!$id){
 			error(P_Lang('未指定ID'),"","error");
 		}
 		$rs = $this->model('content')->get_one($id,true);
+		// print_r($rs);
 		if(!$rs){
 			error(P_Lang('内容不存在'),$this->url,5);
 		}

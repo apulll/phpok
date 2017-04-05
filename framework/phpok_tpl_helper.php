@@ -45,8 +45,7 @@ function token($data)
 //home=首页&prev=上一页&next=下一页&last=尾页&half=5&opt=1&add={total}/{psize}
 function phpok_page($url,$total,$num=0,$psize=20,$param="")
 {
-	print_r($psize);
-	
+
 	if(!$url || !$total){
 		return false;
 	}
@@ -100,7 +99,7 @@ function phpok_plugin()
 	$id = $GLOBALS['app']->app_id;
 	$ctrl = $GLOBALS['app']->ctrl;
 	$func = $GLOBALS['app']->func;
-	
+
 	//装载插件
 	foreach($rslist AS $key=>$value)
 	{
@@ -151,7 +150,7 @@ function phpok_reply($id,$psize=10,$orderby="ASC",$vouch=false)
 	foreach($rslist AS $key=>$value){
 		$idlist[] = $value["id"];
 	}
-	
+
 	//整理回复列表
 	foreach($rslist AS $key=>$value)
 	{
