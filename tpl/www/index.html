@@ -156,56 +156,16 @@
       <div class="contact-itit">
         <span class="t">联系我们</span>
         <span class="et">CONTACT <br>US</span>
-        <div class="desc"> 路尚雕塑艺术（北京）有限公司位于北京市通州区宋庄艺术园区, <br>本公司是集城市现代景观雕塑、建筑构件、建筑装饰与艺术品、销售等为一体的专业性服务机构.</div>
+
+        <!-- php:$contact = phpok('contact') -->
+        <div class="desc">{$contact.contact_c_intro}</div>
       </div>
       <div class="contact-conn">
         <div class="card card-l">
-          <p class="t">北京</p>
-          <p class="t2">BEIJING</p>
-          <a href="" class="map"></a>
-          <hr>
-          <div class="list">
-            <dl>
-              <dt>Mobile：</dt>
-              <dd>(+86)18611282048</dd>
-            </dl>
-            <dl>
-              <dt>Mobile：</dt>
-              <dd>(+86)18600462531</dd>
-            </dl>
-            <dl>
-              <dt>Email： </dt>
-              <dd>1290070804@qq.com</dd>
-            </dl>
-            <dl>
-              <dt>地址：  </dt>
-              <dd>北京市通州区宋庄小宝艺术区（总部）</dd>
-            </dl>
-          </div>
+          {$contact.content}
         </div>
         <div class="card card-r">
-          <p class="t">贵阳</p>
-          <p class="t2">GUIYANG</p>
-          <a href="" class="map"></a>
-          <hr>
-          <div class="list">
-            <dl>
-              <dt>Tel:</dt>
-              <dd>(+86)0851-3995646</dd>
-            </dl>
-            <dl>
-              <dt>Mobile：</dt>
-              <dd>(+86)18611282048</dd>
-            </dl>
-            <dl>
-              <dt>Email： </dt>
-              <dd>1290070804@qq.com</dd>
-            </dl>
-            <dl>
-              <dt>地址：  </dt>
-              <dd>贵阳市小河区黄河南路小河建材市场（分部）</dd>
-            </dl>
-          </div>
+          {$contact.content_sec}
         </div>
       </div>
     </div>

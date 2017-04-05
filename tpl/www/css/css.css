@@ -72,7 +72,7 @@
 .contact-us .contact-itit .et { font-size: 30px; line-height: 54px; }
 .contact-us .contact-itit .desc { text-align: right; position: absolute; right: 20px; bottom: 0; color: #fefefe; font-size: 14px; line-height: 30px; }
 .contact-us .contact-conn { padding-top: 50px; padding-bottom: 80px; }
-.contact-us .card { width: 460px; height: 260px; display: inline-block; padding: 40px 0 0 40px; border: 2px rgba(255, 255, 255, 0.9) solid; box-sizing: border-box; position: relative; }
+.contact-us .card { background-color: #fff;width: 460px; height: 260px; display: inline-block; padding: 40px 0 0 40px; border: 2px rgba(255, 255, 255, 0.9) solid; box-sizing: border-box; position: relative; }
 .contact-us .card .t { font-size: 24px; line-height: 1.4; }
 .contact-us .card .t2 { font-size: 16px; line-height: 2; }
 .contact-us .card hr { width: 15px; height: 2px; background: #fff; margin-bottom: 10px; }
