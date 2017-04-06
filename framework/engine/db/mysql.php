@@ -147,6 +147,7 @@ class db_mysql extends db
 
 	public function query($sql)
 	{
+		
 		if($this->debug){
 			$this->debug($sql);
 		}

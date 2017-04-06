@@ -59,6 +59,7 @@
 </div>
 
 <script>
+
 console.log(api_url('post','save'),'url')
 
   $("#postform").on('submit',function(e){
@@ -69,7 +70,7 @@ console.log(api_url('post','save'),'url')
     params.email = $("input[name=email]").val();
     params.mobile = $("input[name=mobile]").val();
     params.city_name = $("input[name=city_name]").val();
-    params.content = $("input[name=content]").val();
+    params.content = $("textarea[name=content]").val();
     $.ajax({
       url:api_url('post','cooperation'),
       type:'post',

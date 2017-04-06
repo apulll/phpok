@@ -1,25 +1,12 @@
 <?php if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");} ?><?php $title = $rs['title'].' - '.$page_rs['title'];?>
 <?php $title=$title;?><?php $this->assign("title",$title); ?><?php $menutitle=$page_rs['title'];?><?php $this->assign("menutitle",$page_rs['title']); ?><?php $this->output("head","file"); ?>
-<div class="nbanner" style='background-image: url("<?php echo $rs['company_pro_banner']['filename'];?>");'>
-
-  </div>
-<div class="content">
-    <div class="hgroup">
-      <h3><?php echo $rs['title'];?></h3>
-      <hr>
-      <p><?php echo $rs['title_en'];?></p>
-    </div>
-    <div class="about-group clearfix">
-      <span class="img"><img src="<?php echo $rs['thumb']['filename'];?>" alt=""></span>
-      <div class="text-group ">
-        <?php echo $rs['content'];?>
-      </div>
-
-    </div>
-  </div>
+<div class="banner"<?php if($page_rs['banner']){ ?> style="background-image:url('<?php echo $page_rs['banner']['gd']['auto'];?>')"<?php } ?>></div>
 <?php $this->output("block_contact","file"); ?>
 <div class="feedback-group">
   <div class="content">
+
+	<?php $list = phpok('com_cooperation');?>
+
     <div class="hgroup">
       <h3>商务合作</h3>
       <hr>
@@ -50,9 +37,11 @@
       </dl>
     </div>
     <div class="btn">
-      <button>提  交</button>
+      <button class="submit">提  交</button>
     </div>
   </div>
 </div>
+<script>
 
+</script>
 <?php $this->output("foot","file"); ?>

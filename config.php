@@ -35,7 +35,7 @@ $config["db"]["pass"] = "root";
 $config["db"]["data"] = "lxds3";
 $config["db"]["prefix"] = "qinggan_";
 $config["db"]['socket'] = '';
-$config["db"]['debug'] = false;
+$config["db"]['debug'] = true;
 
 /**
  * 手机端参数配置

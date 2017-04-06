@@ -1,22 +1,6 @@
 <!-- php:$title = $rs.title.' - '.$page_rs.title -->
 <!-- include tpl=head title=$title menutitle=$page_rs.title -->
-<div class="nbanner" style='background-image: url("{$rs.company_pro_banner.filename}");'>
-
-  </div>
-<div class="content">
-    <div class="hgroup">
-      <h3>{$rs.title}</h3>
-      <hr>
-      <p>{$rs.title_en}</p>
-    </div>
-    <div class="about-group clearfix">
-      <span class="img"><img src="{$rs.thumb.filename}" alt=""></span>
-      <div class="text-group ">
-        {$rs.content}
-      </div>
-
-    </div>
-  </div>
+<div class="banner"{if $page_rs.banner} style="background-image:url('{$page_rs.banner.gd.auto}')"{/if}></div>
 <!-- include tpl=block_contact -->
 <div class="feedback-group">
   <div class="content">
