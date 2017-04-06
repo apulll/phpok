@@ -197,6 +197,8 @@ class list_model_base extends phpok_model
 
 	function save_ext_aaa($data,$mid)
 	{
+		$yy = !$data || !is_array($data) || !$mid;
+		
 		if(!$data || !is_array($data) || !$mid) return false;
 		return $this->db->insert_array($data,"list_".$mid);
 	}

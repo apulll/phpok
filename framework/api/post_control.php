@@ -152,16 +152,24 @@ class post_control extends phpok_control
 		$array["mobile"] = $arr['mobile'];
 		$array["city_name"] = $arr['city_name'];
 		$array["content"] = $arr['content'];
+
 		$tmp = array();
-		$tmp["title"] = $this->get("title");
+		$tmp["title"] = '无';
+		$tmp["site_id"] = 1;
+		$tmp["project_id"] = 175;
+		$tmp["parent_id"] = 0;
+		$tmp["module_id"] = 82;
+		$tmp["cate_id"] = 0;
 
 		$insert_id = $this->model('list')->save($tmp);
 		$array["id"] = $insert_id;
+
 		$get_result = $this->model('list')->save_ext_aaa($array,82);
+
 		// $get_result = $this->model('list')->save_ext($array,82);
-		if(!$get_result){
-			$this->json(P_Lang('编辑失败，请联系管理员'));
-		}
+		// if($get_result){
+		// 	$this->json(P_Lang('编辑失败，请联系管理员'));
+		// }
 
 
 		$this->json(true);

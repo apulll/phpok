@@ -206,6 +206,8 @@ class db_mysqli extends db
 			return $this->insert_array($sql,$tbl,$type);
 		}
 		$this->query($sql);
+		// $yy = $this->insert_id();
+		// print("sql: $sql\n");exit;
 		return $this->insert_id();
 	}
 
@@ -227,6 +229,7 @@ class db_mysqli extends db
 			$sql_val[] = "'".$value."'";
 		}
 		$sql.= "(".(implode(",",$sql_fields)).") VALUES(".(implode(",",$sql_val)).")";
+
 		return $this->insert($sql);
 	}
 

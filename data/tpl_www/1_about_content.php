@@ -78,8 +78,9 @@ console.log(api_url('post','save'),'url')
       data:{'data':params},
       success:function(rs){
         if(rs.status == 'ok'){
+          alert('感觉您提交的信息，我们会尽快与您联系！')
           // $.dialog.alert('感觉您提交的留言，我们会尽快处理您的留言',function(){
-          //   $.phpok.reload();
+            // $.phpok.reload();
           // },'succeed');
         }else{
           // $.dialog.alert(rs.content);
