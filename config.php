@@ -28,7 +28,7 @@ if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
  * @更新时间 2016年06月05日
 **/
 $config["db"]["file"] = "mysqli";
-$config["db"]["host"] = "123.207.56.190";
+$config["db"]["host"] = "127.0.0.1";
 $config["db"]["port"] = "3306";
 $config["db"]["user"] = "root";
 $config["db"]["pass"] = "root";
