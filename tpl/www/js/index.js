@@ -7,10 +7,19 @@ $(function(){
   });
 
 
+  // $('#case-slide-1').slidesjs({
+  //   play:{
+  //     width: 242,
+  //     auto:false,
+  //     navigation: false
+  //    // interval:3000
+  //   }
+  // });
+
 creatNotice();
-creatSlide("#case-slide-1");
-creatSlide("#case-slide-2");
-creatSlide("#case-slide-3");
+// creatSlide("#case-slide-1");
+// creatSlide("#case-slide-2");
+// creatSlide("#case-slide-3");
 
 
 

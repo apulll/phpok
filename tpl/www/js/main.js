@@ -11,6 +11,30 @@ $(function(){
   //   }
   // })
 
+function Slide(opts) {
+  var default = {
+    obj:null,
+    left:null,
+    right:null
+  }
+  this.options = $.extend({},default,opts)
+  this.init()
+}
+Slide.prototype = {
+  init: function() {
+
+    this.bindEvent();
+  },
+  bindEvent: function() {
+    this.options.obj.on(left,'click',function(e){
+
+    })
+    this.options.obj.on(right,'click',function(e){
+      
+    })
+  },
+
+}
 
 
 })
