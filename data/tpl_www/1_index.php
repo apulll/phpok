@@ -32,7 +32,7 @@
       <p>Boutique case</p>
     </div>
 
-    <div class="index-case-list_content clearfix">
+    <div class="index-case-list_content clearfix js-case-list1" >
         <span class="case-list__btn__left"></span>
         <?php $list = phpok('product');?>
           <div class="case-list__wrapper">
@@ -64,7 +64,7 @@
         <p><img src="tpl/www/images/case-t1.png" alt=""></p>
         <a href="product/basso_relievo.html" class="more"></a>
       </div>
-      <div class="index-case-list__right fl">
+      <div class="index-case-list__right fl js-case-list">
         <span class="case-list__btn__left"></span>
         <?php $list = phpok('product');?>
           <div class="case-list__wrapper">
@@ -93,7 +93,7 @@
         <li<?php if($cate_rs['id'] == $value['id']){ ?> class="current"<?php } ?>><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a></li>
         <?php } ?>
       </div>
-      <div class="index-case-list__right fl">
+      <div class="index-case-list__right fl js-case-list">
         <span class="case-list__btn__left"></span>
         <?php $list = phpok('product');?>
           <div class="case-list__wrapper">
@@ -172,5 +172,10 @@
       </div>
     </div>
   </div>
-
+<script >
+$('.js-case-list1').slide({
+  showNum:4
+})
+  $('.js-case-list').slide()
+</script>
 <?php $this->output("foot","file"); ?>
