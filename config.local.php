@@ -28,14 +28,14 @@ if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
  * @更新时间 2016年06月05日
 **/
 $config["db"]["file"] = "mysqli";
-$config["db"]["host"] = "bdm274102451.my3w.com";
+$config["db"]["host"] = "127.0.0.1";
 $config["db"]["port"] = "3306";
-$config["db"]["user"] = "bdm274102451";
-$config["db"]["pass"] = "lushang815523";
-$config["db"]["data"] = "bdm274102451_db";
+$config["db"]["user"] = "root";
+$config["db"]["pass"] = "root";
+$config["db"]["data"] = "lxds3";
 $config["db"]["prefix"] = "qinggan_";
 $config["db"]['socket'] = '';
-$config["db"]['debug'] = false;
+$config["db"]['debug'] = true;
 
 /**
  * 手机端参数配置
@@ -55,6 +55,6 @@ $config['mobile']['default'] = false;
  * @返回
  * @更新时间
 **/
-$config['develop'] = false;
-$config['debug'] = false;
+$config['develop'] = true;
+$config['debug'] = true;
 ?>
