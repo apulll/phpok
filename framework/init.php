@@ -18,10 +18,10 @@ if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
  * 强制使用UTF-8编码
 **/
 header("Content-type: text/html; charset=utf-8");
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
-header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT"); 
-header("Cache-control: no-cache,no-store,must-revalidate,max-age=1"); 
-header("Pramga: no-cache"); 
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT");
+header("Cache-control: no-cache,no-store,must-revalidate,max-age=1");
+header("Pramga: no-cache");
 
 /**
  * 计算执行的时间
@@ -76,7 +76,7 @@ run_time();
 run_memory();
 
 /**
- * 用于调试统计时间，无参数，启用数据库调试的结果会在这里输出，需要在模板适当位置写上：{func debug_time} 
+ * 用于调试统计时间，无参数，启用数据库调试的结果会在这里输出，需要在模板适当位置写上：{func debug_time}
 **/
 function debug_time()
 {
@@ -356,17 +356,18 @@ class _init_phpok
 			}
 		}
 		//验证
-		if($site_rs && $site_rs['_mobile']){
-			if($site_rs['_mobile']['domain'] == $domain){
-				$this->url = 'http://'.$site_rs['_mobile']['domain'].$site_rs['dir'];
-				$this->is_mobile = true;
-			}else{
-				if($this->is_mobile){
-					$url = 'http://'.$site_rs['_mobile']['domain'].$site_rs['dir'];
-					$this->_location($url);
-				}
-			}
-		}
+		// if($site_rs && $site_rs['_mobile']){
+		// 	if($site_rs['_mobile']['domain'] == $domain){
+		// 		$this->url = 'http://'.$site_rs['_mobile']['domain'].$site_rs['dir'];
+		// 		$this->is_mobile = true;
+		// 	}
+		// 	// else{
+		// 	// 	if($this->is_mobile){
+		// 	// 		$url = 'http://'.$site_rs['_mobile']['domain'].$site_rs['dir'];
+		// 	// 		$this->_location($url);
+		// 	// 	}
+		// 	// }
+		// }
 		$ext_list = $this->model('site')->site_config($site_rs["id"]);
 		if($ext_list){
 			$site_rs = array_merge($ext_list,$site_rs);
@@ -387,14 +388,14 @@ class _init_phpok
 				$tpl_rs["refresh_auto"] = $rs["refresh_auto"] ? true : false;
 				$tpl_rs["refresh"] = $rs["refresh"] ? true : false;
 				$tpl_rs["tpl_ext"] = $rs["ext"] ? $rs["ext"] : "html";
-				if($this->is_mobile){
-					$tpl_rs["id"] = $rs["id"]."_mobile";
-					$tplfolder = $rs["folder"] ? $rs["folder"]."_mobile" : "www_mobile";
-					if(!file_exists($this->dir_root."tpl/".$tplfolder)){
-						$tplfolder = $rs["folder"] ? $rs["folder"] : "www";
-					}
-					$tpl_rs["dir_tpl"] = "tpl/".$tplfolder;
-				}
+				// if($this->is_mobile){
+				// 	$tpl_rs["id"] = $rs["id"]."_mobile";
+				// 	$tplfolder = $rs["folder"] ? $rs["folder"]."_mobile" : "www_mobile";
+				// 	if(!file_exists($this->dir_root."tpl/".$tplfolder)){
+				// 		$tplfolder = $rs["folder"] ? $rs["folder"] : "www";
+				// 	}
+				// 	$tpl_rs["dir_tpl"] = "tpl/".$tplfolder;
+				// }
 				$tpl_rs['langid'] = isset($_SESSION[$this->app_id.'_lang_id']) ? $_SESSION[$this->app_id.'_lang_id'] : 'default';
 				$site_rs["tpl_id"] = $tpl_rs;
 				unset($tpl_rs,$rs);
@@ -430,7 +431,7 @@ class _init_phpok
 		}
 		$this->assign('plugin',$param);
 	}
-	
+
 	/**
 	 * 动态引态第三方类包，提供的类包在framework/libs/下
 	 * @参数 $class，类的名称，第三方对应的是文件夹名称，要求全部小写
@@ -679,7 +680,7 @@ class _init_phpok
 		$myurl = str_replace("//","/",$myurl);
 		return $http_type.$myurl;
 	}
-	
+
 	/**
 	 * 配置网站全局常量
 	 */
@@ -864,10 +865,10 @@ class _init_phpok
 		$this->plugin('phpok-after');
 		$this->plugin('ap-'.$this->ctrl.'-'.$this->func.'-after');
 		header("Content-type: text/html; charset=utf-8");
-		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
-		header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT"); 
-		header("Cache-control: no-cache,no-store,must-revalidate,max-age=3"); 
-		header("Pramga: no-cache"); 
+		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+		header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT");
+		header("Cache-control: no-cache,no-store,must-revalidate,max-age=3");
+		header("Pramga: no-cache");
 		$this->tpl->display($file,$type,$path_format);
 	}
 
@@ -1017,7 +1018,7 @@ class _init_phpok
 		if(!$ctrl){
 			$ctrl = 'index';
 		}
-		//如果没有Func,将使用 index 
+		//如果没有Func,将使用 index
 		if(!$func){
 			$func = $this->get($this->config["func_id"],"system");
 		}
@@ -1079,9 +1080,9 @@ class _init_phpok
 		ob_end_clean();
 		ob_start();
 		header("Content-type: text/html; charset=utf-8");
-		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
-		header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT"); 
-		header("Cache-control: no-cache,no-store,must-revalidate,max-age=0"); 
+		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+		header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT");
+		header("Cache-control: no-cache,no-store,must-revalidate,max-age=0");
 		header("Pramga: no-cache");
 		header("Location:".$url);
 		ob_end_flush();
@@ -1169,10 +1170,10 @@ class _init_phpok
 	final public function json($content,$status=false,$exit=true,$format=true)
 	{
 		if($exit){
-			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
-			header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT"); 
-			header("Cache-control: no-cache,no-store,must-revalidate,max-age=0"); 
-			header("Pramga: no-cache"); 
+			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+			header("Last-Modified: Mon, 26 Jul 1997 05:00:00  GMT");
+			header("Cache-control: no-cache,no-store,must-revalidate,max-age=0");
+			header("Pramga: no-cache");
 		}
 		if(!$content && is_bool($content)){
 			$rs = array('status'=>'error');
@@ -1378,7 +1379,7 @@ class phpok_model extends _init_auto
 			return $GLOBALS['app']->model($id);
 		}
 	}
-	
+
 	public function __destruct()
 	{
 		parent::__destruct();
@@ -1440,7 +1441,7 @@ class phpok_plugin extends _init_auto
 	 * 返回插件信息
 	 * @参数 $id 插件ID，为空时尝试读取当前插件ID
 	 * @返回 数组 id插件ID，title名称，author作者，version版本，note说明，param插件扩展保存的数据，这个是一个数组，path插件路径
-	 * @更新时间 
+	 * @更新时间
 	**/
 	final public function _info($id='')
 	{
@@ -1483,7 +1484,7 @@ class phpok_plugin extends _init_auto
 	 * 返回插件输出的HTML数据，请注意，这里并没有输出，只是返回
 	 * @参数 $name 模板名称，带后缀的模板名称，相对路径，系统会依次检查，具体请看：<b>private function _tplfile()</b>
 	 * @参数 $id 字符串，指定的插件ID，为空尝试获取当前插件ID
-	 * @返回 正确时返回模板内容，错误时返回false 
+	 * @返回 正确时返回模板内容，错误时返回false
 	**/
 	final public function _tpl($name,$id='')
 	{
@@ -1581,7 +1582,7 @@ class phpok_plugin extends _init_auto
 	{
 		return $this->_save($ext,$id);
 	}
-	
+
 	/**
 	 * 旧版本写法，与之对应新的写法是：$this->_tpl()
 	**/

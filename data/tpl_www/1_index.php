@@ -8,6 +8,7 @@
 
     </a>
     <?php } ?>
+    
 </div>
 
 <?php } ?>
@@ -21,6 +22,7 @@
             <li><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a>
             </li>
             <?php } ?>
+            
         </ul>
       </div>
     </div>
@@ -29,58 +31,60 @@
       <hr>
       <p>Boutique case</p>
     </div>
-    <div class="case-slide slide-ic" id="case-slide-1">
-      <span class="arrow-left"></span>
-      <div class="index-case-content">
+
+    <div class="index-case-list_content clearfix js-case-list1" >
+        <span class="case-list__btn__left"></span>
         <?php $list = phpok('product');?>
-        <div class="index-case-list">
-          <ul>
+          <div class="case-list__wrapper">
+            <ul class="case-list__ul">
             <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
 
             <?php $thumb = current($value['thumb']);?>
 
             <?php if($value['competitive_pro']){ ?>
-              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
-            <?php } ?>
-            <?php } ?>
-          </ul>
-        </div>
-      </div>
-      <span class="arrow-right"></span>
-    </div>
-    <div class="hgroup">
-      <h3>工程案例</h3>
-      <hr>
-      <p>PROJECT CASE</p>
-    </div>
-    <div class="case-project">
-      <div class="left">
-        <p><img src="tpl/www/images/case-t1.png" alt=""></p>
-        <a href="product/basso_relievo.html" class="more"></a>
-      </div>
-      <div class="right slide-c" id="case-slide-2">
-        <span class="arrow-left"></span>
-        <div class="index-case-content">
-        <?php $list = phpok('product');?>
-          <div class="index-case-list">
-            <ul>
-            <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
-            <?php $thumb = current($value['thumb']);?>
-
-            <?php if($value['cate_id'] == 11){ ?>
-              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
             <?php } ?>
             <?php } ?>
 
             </ul>
           </div>
-        </div>
-        <span class="arrow-right"></span>
+        <span class="case-list__btn__right"></span>
+    </div>
+
+    
+
+
+    <div class="hgroup">
+      <h3>工程案例</h3>
+      <hr>
+      <p>PROJECT CASE</p>
+    </div>
+    <div class="case-project clearfix">
+      <div class="left fl">
+        <p><img src="tpl/www/images/case-t1.png" alt=""></p>
+        <a href="product/basso_relievo.html" class="more"></a>
+      </div>
+      <div class="index-case-list__right fl js-case-list">
+        <span class="case-list__btn__left"></span>
+        <?php $list = phpok('product');?>
+          <div class="case-list__wrapper">
+            <ul class="case-list__ul">
+            <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
+            <?php $thumb = current($value['thumb']);?>
+
+            <?php if($value['cate_id'] == 11){ ?>
+              <li class="case-list__li"><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+            <?php } ?>
+            <?php } ?>
+
+            </ul>
+          </div>
+        <span class="case-list__btn__right"></span>
       </div>
     </div>
     <hr class="gline">
-    <div class="case-project">
-      <div class="left">
+    <div class="case-project clearfix">
+      <div class="left fl">
         <p><img src="tpl/www/images/case-t2.png" alt=""></p>
         <a href="/product/round_sculpture.html" class="more"></a>
         <?php $list=phpok('_catelist',array('pid'=>$page_rs['id']));?>
@@ -89,24 +93,22 @@
         <li<?php if($cate_rs['id'] == $value['id']){ ?> class="current"<?php } ?>><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><?php echo phpok_cut($value['title'],'15','…');?></a></li>
         <?php } ?>
       </div>
-      <div class="right slide-c" id="case-slide-3">
-        <span class="arrow-left"></span>
-        <div class="index-case-content">
-          <?php $list = phpok('product');?>
-          <div class="index-case-list">
-            <ul>
+      <div class="index-case-list__right fl js-case-list">
+        <span class="case-list__btn__left"></span>
+        <?php $list = phpok('product');?>
+          <div class="case-list__wrapper">
+            <ul class="case-list__ul">
             <?php $tmpid["num"] = 0;$list['rslist']=is_array($list['rslist']) ? $list['rslist'] : array();$tmpid["total"] = count($list['rslist']);$tmpid["index"] = -1;foreach($list['rslist'] AS $key=>$value){ $tmpid["num"]++;$tmpid["index"]++; ?>
             <?php $thumb = current($value['thumb']);?>
 
             <?php if($value['cate_id'] == 12){ ?>
-              <li><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
             <?php } ?>
             <?php } ?>
 
             </ul>
           </div>
-        </div>
-        <span class="arrow-right"></span>
+        <span class="case-list__btn__right"></span>
       </div>
     </div>
 
@@ -170,5 +172,10 @@
       </div>
     </div>
   </div>
-
+<script >
+$('.js-case-list1').slide({
+  showNum:4
+})
+  $('.js-case-list').slide()
+</script>
 <?php $this->output("foot","file"); ?>

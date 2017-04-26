@@ -27,7 +27,7 @@
 .hgroup hr { width: 160px; height: 2px; background: #ccc; display: inline-block; margin: 20px 0; }
 .hgroup p { font-size: 30px; color: #666; line-height: 1; text-transform: uppercase; }
 
-.index-case-list { font-size: 0; line-height: 0; position: absolute; top: 0; left: 0; }
+/*.index-case-list { font-size: 0; line-height: 0; position: absolute; top: 0; left: 0; }*/
 .index-case-list ul > li { display: inline-block; vertical-align: top; padding: 0 6px; }
 
 .case-slide { padding: 0 16px; }
@@ -35,7 +35,7 @@
 .index-case-content { overflow: hidden; height: 320px; padding: 0; position: relative; }
 
 .slide-c { position: relative; }
-.slide-c span.arrow-left { width: 26px; height: 80px; background: url("../images/arrow.png") no-repeat; position: absolute; top: calc(50% - 40px); left: 12px; z-index: 99; cursor: pointer; }
+.slide-c span.arrow-left { width: 26px; height: 80px; background: url("../images/arrow.png") no-repeat; position: absolute; top: calc(50% - 40px); left: 18px; z-index: 99; cursor: pointer; }
 .slide-c span.arrow-right { width: 26px; height: 80px; background: url("../images/arrow.png") no-repeat; position: absolute; top: calc(50% - 40px); right: 18px; z-index: 99; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); cursor: pointer; }
 
 .slide-ic { position: relative; }
@@ -201,4 +201,77 @@ a.xwgd{ display:inline-block; line-height:40px; color:#c9caca; font-family:Arial
 .pages li a:hover{  background:#ef1b27; color:#fff; text-decoration:none;}
 .pages li span{ display:block;  height:18px; line-height:18px; color:#c4c4c4;padding:0 10px; }
 .pages .current a{  background:#ef1b27; color:#fff;}
+
+
+
+/*首页样式修改*/
+.index-case-content {
+        width: 3000px;
+/*    margin-left: -252px;*/
+}
+.case-project .right {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 6px;
+    box-sizing: border-box;
+    width: 745px;
+    overflow: hidden;
+}
+
+/*new index*/
+.fl {
+    float: left;
+}
+.index-case-list_content{
+    width: 1000px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.index-case-list__right {
+    width: 750px;
+    display: inline-block;
+    float: left;
+    margin-top: 34px;
+    position: relative;
+    overflow: hidden;
+}
+.case-list__wrapper {
+
+}
+.case-list__ul {
+    width:3000px;
+}
+.case-list__li {
+    width: 230px;
+    height:324px;
+    float: left;
+    margin: 0 10px;
+}
+.case-list__btn__left {
+    width: 26px;
+    height: 80px;
+    background: url(../images/arrow.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 18px;
+    z-index: 99;
+    cursor: pointer;
+}
+.case-list__btn__right {
+    width: 26px;
+    height: 80px;
+    background: url(../images/arrow.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    right: 18px;
+    z-index: 99;
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+    
 /*# sourceMappingURL=css.css.map */
