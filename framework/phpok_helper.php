@@ -923,7 +923,7 @@ function pro_case_list($caselist)
 	foreach($caselist AS $key=>$value)
 		{
 
-					$tmp[] = $value['gd']['thumb'];
+					$tmp[] = $value['gd']['auto'];
 
 
 		}

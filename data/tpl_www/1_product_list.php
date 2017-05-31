@@ -29,7 +29,7 @@
 
 				<div class="box" rel='<?php echo $caselist;?>' title='<?php echo $value['title'];?>'><span><img src="<?php echo $thumb['gd']['thumb'];?>" alt=""></span><h3><?php echo $value['title'];?></h3><button>查看详情</button></div>
 
-				
+
 			</li>
 			<?php } ?>
         </ul>
@@ -38,6 +38,7 @@
     <div class="pages">
     	<?php $this->output("block_pagelist","file"); ?>
     </div>
+    <!-- <pre><?php echo print_r($rslist,true);?></pre> -->
   </div>
   <div class="show-detail" id="show-detail">
     <span class="close"></span>

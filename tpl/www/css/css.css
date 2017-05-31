@@ -139,7 +139,7 @@
 .show-detail .close { position: absolute; top: 50px; right: 50px; width: 50px; height: 50px; background: url("../images/close.png"); cursor: pointer; }
 .show-detail .slide { width: 810px; height: 810px; position: absolute; top: calc(50% - 405px); left: calc(50% - 405px); background: url("../images/show-bg.png"); }
 .show-detail .img { width: 810px; height: 810px; background-position: center center; background-repeat: no-repeat; }
-.show-detail .nimg { width: 810px; height: 810px; background-position: center center; background-repeat: no-repeat; }
+.show-detail .nimg { width: 810px; height: 810px; background-position: center center; background-repeat: no-repeat; background-size: 100%;}
 .show-detail .slidesjs-pagination { position: absolute; bottom: 30px; text-align: center; left: 0; right: 0; }
 .show-detail .slidesjs-pagination li { display: inline-block; vertical-align: top; padding: 0 5px; font-size: 0; }
 .show-detail .slidesjs-pagination a { width: 86px; height: 7px; background: rgba(255, 255, 255, 0.3); display: inline-block; vertical-align: top; }
@@ -273,5 +273,5 @@ a.xwgd{ display:inline-block; line-height:40px; color:#c9caca; font-family:Arial
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-    
+
 /*# sourceMappingURL=css.css.map */
