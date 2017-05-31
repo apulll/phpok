@@ -1,4 +1,4 @@
-<!-- include tpl=head menutitle=网站首页 -->
+include tpl=head menutitle=网站首页 -->
 
 <!-- php:$list = phpok('picplayer') -->
 <!-- if $list.total -->
@@ -8,7 +8,7 @@
 
     </a>
     <!-- /loop -->
-    
+
 </div>
 
 <!-- /if -->
@@ -22,7 +22,7 @@
             <li><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a>
             </li>
             <!-- /loop -->
-            
+
         </ul>
       </div>
     </div>
@@ -51,7 +51,7 @@
         <span class="case-list__btn__right"></span>
     </div>
 
-    
+
 
 
     <div class="hgroup">
@@ -73,7 +73,7 @@
             <!-- php:$thumb = current($value.thumb) -->
 
             <!-- if $value.cate_id == 11 -->
-              <li class="case-list__li"><a href="javascript:void(0)" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="{$value.url}" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
             <!-- /if -->
             <!-- /loop -->
 
@@ -81,6 +81,7 @@
           </div>
         <span class="case-list__btn__right"></span>
       </div>
+      <!-- <pre>{:print_r($list.rslist,true)}</pre> -->
     </div>
     <hr class="gline">
     <div class="case-project clearfix">
@@ -178,4 +179,4 @@ $('.js-case-list1').slide({
 })
   $('.js-case-list').slide()
 </script>
-<!-- include tpl=foot -->
+<!-- include tpl=foot
