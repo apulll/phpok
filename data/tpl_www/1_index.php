@@ -42,7 +42,7 @@
             <?php $thumb = current($value['thumb']);?>
 
             <?php if($value['competitive_pro']){ ?>
-              <li class="case-list__li"><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
             <?php } ?>
             <?php } ?>
 
@@ -81,7 +81,7 @@
           </div>
         <span class="case-list__btn__right"></span>
       </div>
-      <pre><?php echo print_r($list['rslist'],true);?></pre>
+      <!-- <pre><?php echo print_r($list['rslist'],true);?></pre> -->
     </div>
     <hr class="gline">
     <div class="case-project clearfix">
@@ -103,7 +103,7 @@
             <?php $thumb = current($value['thumb']);?>
 
             <?php if($value['cate_id'] == 12){ ?>
-              <li class="case-list__li"><a href="javascript:void(0)" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="<?php echo $value['url'];?>" title="<?php echo $value['title'];?>"><img src="<?php echo $thumb['gd']['thumb'];?>" border="0" id="product_<?php echo $value['id'];?>" width="230" height="320" /></a></li>
             <?php } ?>
             <?php } ?>
 
@@ -179,4 +179,4 @@ $('.js-case-list1').slide({
 })
   $('.js-case-list').slide()
 </script>
-<?php $this->output("foot","file"); ?>
+<!-- include tpl=foot

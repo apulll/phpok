@@ -1,4 +1,4 @@
-<?php if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");} ?><?php echo tpl_head(array('title'=>$title,'css'=>"tpl/www/css/reset.css,tpl/www/css/css.css",'js'=>"tpl/www/js/jquery-3.1.1.min.js,tpl/www/js/main.js,tpl/www/js/jquery.slides.min.js,tpl/www/js/index.js,tpl/www/js/case.js",'html5'=>"true"));?>
+<?php if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");} ?><?php echo tpl_head(array('title'=>$title,'css'=>"tpl/www/css/reset.css,tpl/www/css/css.css",'js'=>"tpl/www/js/jquery-3.1.1.min.js,tpl/www/js/main.js,tpl/www/js/jquery.slides.min.js,tpl/www/js/index.js,tpl/www/js/case.js,tpl/www/js/product-detail.js",'html5'=>"true"));?>
 <body>
 
 

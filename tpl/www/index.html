@@ -1,4 +1,4 @@
-include tpl=head menutitle=网站首页 -->
+<!-- include tpl=head menutitle=网站首页 -->
 
 <!-- php:$list = phpok('picplayer') -->
 <!-- if $list.total -->
@@ -42,7 +42,7 @@ include tpl=head menutitle=网站首页 -->
             <!-- php:$thumb = current($value.thumb) -->
 
             <!-- if $value.competitive_pro -->
-              <li class="case-list__li"><a href="javascript:void(0)" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="{$value.url}" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
             <!-- /if -->
             <!-- /loop -->
 
@@ -103,7 +103,7 @@ include tpl=head menutitle=网站首页 -->
             <!-- php:$thumb = current($value.thumb) -->
 
             <!-- if $value.cate_id == 12 -->
-              <li class="case-list__li"><a href="javascript:void(0)" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
+              <li class="case-list__li"><a href="{$value.url}" title="{$value.title}"><img src="{$thumb.gd.thumb}" border="0" id="product_{$value.id}" width="230" height="320" /></a></li>
             <!-- /if -->
             <!-- /loop -->
 
